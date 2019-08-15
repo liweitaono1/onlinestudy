@@ -1,0 +1,11 @@
+social-auth-app-django
+django
+djangorestframework
+redis
+geetest
+alipay-sdk-python
+django-cors-headers
+numpy
+pandas
+matplotlib
+autopep8
