@@ -17,7 +17,7 @@ from rest_framework.authentication import BaseAuthentication
 from rest_framework.exceptions import AuthenticationFailed
 
 from generic.models import Account
-from utils.redis_pool import POOL
+from redis_pool import POOL
 
 RedisConn = redis.Redis(connection_pool=POOL)
 

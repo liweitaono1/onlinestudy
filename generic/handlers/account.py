@@ -1,24 +1,11 @@
-#!/usr/bin/env python
-# encoding: utf-8
-
-
-"""
-@version: ??
-@author: wtli
-@license: MIT Licence
-@contact: 1135577502@qq.com
-@site: https://
-@software: PyCharm
-@file: account.py
-@time: 2019-08-23
-"""
-from generic.models import Account
-from serivce.v1 import StartXModelForm, StartXHandler
+from startX.serivce.v1 import StartXHandler, get_field_display, StartXModelForm
+from generic import models
+from .base_promission import PermissionHandler
 
 
 class AccountModelForm(StartXModelForm):
     class Meta:
-        model = Account
+        model = models.Account
         fields = ['id', 'username', 'email', 'level']
 
 

@@ -13,8 +13,12 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+import sys
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0,os.path.join(BASE_DIR,'startX'))
+sys.path.insert(0,os.path.join(BASE_DIR,'rbac'))
+sys.path.insert(0,os.path.join(BASE_DIR,'utils'))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
@@ -144,7 +148,9 @@ CORS_ALLOW_CREDENTIALS = True
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-CORS_ORIGIN_WHITELIST = ('*')
+# CORS_ORIGIN_WHITELIST = (
+#     '*'
+# )
 
 CORS_ALLOW_METHODS = (
 

@@ -1,4 +1,5 @@
 import json
+import os
 import time
 
 import redis
@@ -11,9 +12,9 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from generic import models, serializers
-from utils import Auther
-from utils.BaseResponse import BaseResponse
-from utils.redis_pool import POOL
+from Auther import Auther
+from BaseResponse import BaseResponse
+from redis_pool import POOL
 
 
 class CategoryView(APIView):
